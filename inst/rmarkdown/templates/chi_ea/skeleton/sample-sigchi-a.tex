@@ -2,9 +2,11 @@
 \usepackage{booktabs} % For formal tables
 \usepackage{ccicons}  % For Creative Commons citation icons
 
+\def\tightlist{} % UL 18 Oct 2018 stop pandoc from messing things up by putting lists in 'tightlist' command when no space between bullet points in Rmd file
+
 % Copyright
 %\setcopyright{none}
-\setcopyright{acmcopyright}
+\setcopyright{$copyright$}
 %\setcopyright{acmlicensed}
 %\setcopyright{rightsretained}
 %\setcopyright{usgov}
@@ -14,69 +16,39 @@
 
 
 % DOI
-\acmDOI{10.475/123_4}
+\acmDOI{$DOI$}
 
 % ISBN
-\acmISBN{123-4567-24-567/08/06}
+\acmISBN{$ISBN$}
 
 %Conference
-\acmConference[WOODSTOCK'97]{ACM Woodstock conference}{July 1997}{El
-  Paso, Texas USA}
-\acmYear{1997}
-\copyrightyear{2016}
+\acmConference[$conference-short$]{$conference$}{$conference-date$}{$conference-location$}
+\acmYear{$acm-year$}
+\copyrightyear{$copyright-year$}
 
-\acmPrice{15.00}
+\acmPrice{$acm-price$}
 
 %\acmBadgeL[http://ctuning.org/ae/ppopp2016.html]{ae-logo}
 %\acmBadgeR[http://ctuning.org/ae/ppopp2016.html]{ae-logo}
 
 \begin{document}
-\title{SIGCHI Extended Abstracts Sample File}
+\title[$short-title$]{$title$}
 
-\author{First Author}
-\affiliation{%
-  \institution{University of Author}
-  \city{Authortown}
-  \state{CA}
-  \postcode{94022}
-  \country{USA} }
-\email{author1@anotherco.edu}
-
-\author{Second Author}
-\affiliation{%
-  \position{VP, Authoring}
-  \institution{Authorship Holdings, Ltd.}
-  \city{Awdur}
-  \postcode{SA22 8PP}
-  \country{UK}}
-\email{author2@author.ac.uk}
-
-\author{Third Author \\
-  Fourth Author}
-\affiliation{%
-  \institution{L\={e}khaka Labs}
-  \city{Bengaluru} \postcode{560 080} \country{India}}
-\email{author3@another.com}
-\email{author4@another.com}
-
-\author{Fifth Author}
-\affiliation{\institution{YetAuthorCo, Inc.}
-  \city{Authortown} \state{BC}
-  \postcode{V6M 22P} \country{Canada}}
-\email{author5@anotherco.com}
-
-\author{Sixth Author}
-\affiliation{\institution{Universit\'e de Auteur-Sud}
-  \city{Auteur} \postcode{40222} \country{France}}
-\email{author6@author.fr}
-
-\author{Seventh Author}
-\affiliation{\institution{University of Umbhali}
-  \city{Pretoria} \country{South Africa}}
-\email{author7@umbhaliu.ac.za}
+$for(author)$
+  \author{$author.name$}
+  \affiliation{
+    \position{$author.affiliation.position$}
+    \institution{$author.affiliation.institution$}
+    \city{$author.affiliation.city$}
+    \state{$author.affiliation.state$}
+    \country{$author.affiliation.country$}
+    \postcode{$author.affiliation.postcode$}
+  }
+  \email{$author.email$}
+$endfor$
 
 % The default list of authors is too long for headers.
-\renewcommand{\shortauthors}{F. Author et al.}
+\renewcommand{\shortauthors}{$short-authors$}
 
 
 %
@@ -116,18 +88,11 @@
 
 
 \begin{abstract}
-  UPDATED---\today. This sample paper describes the formatting
-  requirements for SIGCHI Extended Abstract Format, and this sample
-  file offers recommendations on writing for the worldwide SIGCHI
-  readership. Please review this document even if you have submitted
-  to SIGCHI conferences before, as some format details have changed
-  relative to previous years. Abstracts should be about 150
-  words. Required.
+  $abstract$
 \end{abstract}
 
 
-\keywords{Authors' choice; of terms; separated; by
-  semicolons; include commas, within terms only; required.}
+\keywords{$keywords$}
 
 
 
@@ -180,7 +145,7 @@ permissions policy, see:
 
 
 \section{Page Size}
-All SIGCHI submissions should be US letter (8.5 $\times$ 11
+All SIGCHI submissions should be US letter (8.5 $$\times$$ 11
 inches). US Letter is the standard option used by this \LaTeX\
 template.
 
@@ -254,7 +219,7 @@ pay attention to the following:
   ``5/1/97'' may mean 5 January or 1 May, and ``seven o'clock'' may
   mean 7:00 am or 19:00). For currencies, indicate equivalences:
   ``Participants were paid {\fontfamily{txr}\selectfont \textwon}
-  25,000, or roughly US \$22.''
+  25,000, or roughly US \$$22.''
 \item Be careful with the use of gender-specific pronouns (he, she)
   and other gender-specific words (chairman, manpower,
   man-months). Use inclusive language (e.g., she or he, they, chair,

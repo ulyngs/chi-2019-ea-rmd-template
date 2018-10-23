@@ -13,79 +13,61 @@ acm-price: 15.00
 
 #paper metadata
 title: Writing CHI Proceedings Papers With R Markdown
-subtitle: Using the 2018 ACM \LaTeX\ template
 short-title: CHI Papers With R Markdown
-titlenote: Who needs titlenotes anyway?
-subtitlenote: "Certainly can't recall the last time I used subtitlenotes, but it's good to have the option."
-short-authors: B. Trovato et al.
+short-authors: F. Author et al.
 author:
-  - name: Ben Trovato
-    authornote: Dr. Trovato insisted his name be first.
-    email: trovato\@corporation.com  #NOTE: you must escape the @
+  - name: First Author
     affiliation:
-      institution: Institute for Clarity in Documentation
-      city: Dublin
-      state: Ohio
-      postcode: 43017-6221
-  - name: G.K.M. Tobin
-    authornote: The secretary disavows any knowledge of this author's actions.
+      institution: University of Author
+      city: Authortown
+      state: CA
+      country: USA
+      postcode: 94022
+    email: author1\@anotherco.edu  #NOTE: you must escape the @
+  - name: Second Author
     affiliation:
-      institution: Institute for Clarity in Documentation
-      city: Dublin
-      state: Ohio
-      postcode: 43017-6221
-    email: webmaster\@marysville-ohio.com
-  - name: Lars Thørväld
-    authornote: This author is the one who did all the really hard work.
+      position: VP, Authoring
+      institution: Authorship Holdings, Ltd.
+      city: Awdur
+      country: UK
+      postcode: SA22 8PP
+    email: author2\@author.ac.uk
+  - name: Third Author
     affiliation:
-      institution: The Thørväld Group
-      city: Hekla
-      country: Iceland
-    email: larst\@affiliation.org
-  - name: Valerie Béranger
-    affiliation:
-      institution: Inria Paris-Rocquencourt
-      city: Rocquencourt
-      country: France
-  - name: Aparna Patel
-    affiliation:
-      institution: Rajiv Gandhi University
-      city: Doimukh
-      state: Arunachal Pradesh
+      institution: Lẽkhaka Labs
+      city: Bengaluru
+      postcode: 560 080
       country: India
-  - name: Huifen Chan
+    email: author3\@another.com
+  - name: Fourth Author
     affiliation:
-      institution: Tsinghua University
-      city: Haidian Qu
-      state: Beijing Shi
-      country: China
-  - name: Charles Palmer
+      institution: YetAuthorCor, Inc.
+      city: Authortown
+      state: BC
+      country: Canada
+      postcode: V6M 22P
+    email: author4\@anotherco.com
+  - name: Fifth Author
     affiliation:
-      institution: Palmer Research Laboratories
-      city: San Antonio
-      state: Texas
-      country: China
-    email: cpalmer\@prl.com
-  - name: John Smith
+      institution: Université de Auteur-Sud
+      city: Auteur
+      country: France
+      postcode: 40222
+    email:  author5\@author.fr
+  - name: Sixth Author
     affiliation:
-      institution: The Thørväld Group
-    email: jsmith\@affiliation.org
-  - name: Julius P. Kumquat
-    affiliation:
-      institution: The Kumquat Consortium
-    email: jpkumquat\@consortium.net
-abstract: This is a guided illustration of how to write a full paper for CHI, using the latest official ACM \LaTeX\ template [Version 1.55, September 11, 2018](https://www.acm.org/publications/proceedings-template). #If you put the abstract in quotes, you must escape LaTeX syntax with an extra '\', e.g. '\\LaTeX\\'.
-keywords: ACM proceedings, \LaTeX, text tagging
-teaser-figure: figures/sampleteaser.pdf
-teaser-caption: Write your teaser caption here
-teaser-label: teaser
-review: true
-anonymous: false
+      institution: University of Umbhali
+      city: Pretoria
+      country: South Africa
+    email: author6\@umbhaliu.ac.za
+abstract: This is a guided illustration of how to write a CHI Extended Abstracts paper in R Markdown, using the latest official ACM \LaTeX\ template [Version 1.55, September 11, 2018](https://www.acm.org/publications/proceedings-template). #If you put the abstract in quotes, you must escape LaTeX syntax with an extra '\', e.g. '\\LaTeX\\'.
+keywords: CHI Extended Abstracts; \LaTeX; R Markdown; reproducible papers
 output:
   bookdown::pdf_document2:
     template: sample-sigchi-a.tex 
     keep_tex: true
     citation_package: natbib
+    latex_engine: xelatex #if you use pdflatex, you'll get an error with some special characters like ẽ
 #NOTE: to update the CCSXML (i.e. the code to generate the 'CCS Concepts') directly in sample-sigchi.tex - it's too messy to do from the YAML in here.
 ---
 
