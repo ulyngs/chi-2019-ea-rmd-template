@@ -6,7 +6,7 @@ Using a tool like [R Markdown](https://rmarkdown.rstudio.com) to write scientifi
 
 However, getting R Markdown to [play nicely with the latest ACM LaTeX templates can be tricky](https://ulriklyngs.com/blog/acm-articles-with-r-markdown).
 
-This R package makes it easy, by providing a ready-made .Rmd template with YAML metadata and body text illustrations of what you need to know, which compiles to the latest CHI Proceedings (used for CHI'19 submissions) format via the [official 2017 ACM Master Article LaTeX template](https://www.acm.org/publications/proceedings-template).
+This R package makes it easy, by providing a ready-made .Rmd template with YAML metadata and body text illustrations of what you need to know, which compiles to the latest CHI Extended Abstracts (used for CHI'19 submissions) format via the [official 2017 ACM Master Article LaTeX template](https://www.acm.org/publications/proceedings-template).
 
 ## Installation
 ``` r
