@@ -224,7 +224,7 @@ knitr::include_graphics("figures/cats.png")
 ```
 
 ### Full width figures
-To make figures take up to the full width of the page, set the environment to `figure*` with the chunk option `fig.env = 'figure*'`. You may want to set its width to the full text width with the chunk option `out.width='\\fulltextwidth'`, as in Figure \ref@(fig:full-width-figure).
+To make figures take up to the full width of the page, set the environment to `figure*` with the chunk option `fig.env = 'figure*'`. You may want to set its width to the full text width with the chunk option `out.width='\\fulltextwidth'`, as in Figure \@ref(fig:full-width-figure).
 
 ```{r full-width-figure, out.width='\\fulltextwidth', fig.env='figure*', fig.cap="In this image, the map maximizes use of space. Note that \\LaTeX\\ tends to render large figures on a dedicated page. Image: \\ccbynd~ayman on Flickr."}
 knitr::include_graphics("figures/map.png")
