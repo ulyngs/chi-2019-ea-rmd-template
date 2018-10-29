@@ -17,7 +17,7 @@ devtools::install_github("ulyngs/chi-ea-rmd-template")
 
 ## Usage
 The easiest way to use the template is with RStudio, via File -> New File -> R Markdown...
-In the dialog box, click 'From Template', then find the new 'ACM CHI Extended Abstracts 2018 {CHIEA2018}' option, choose a name for what you'd like to make (e.g. 'Test'), then click OK:
+In the dialog box, click 'From Template', then find the new 'ACM CHI Extended Abstracts 2018 {CHIEA2018}' option, give your manuscript a name (e.g. 'Test'), then click OK:
 ![R Markdown template dialog](man/1_template.png "R Markdown template dialog")
 
 A new folder named *Test* is created, and you see an open **Test.Rmd** file:
