@@ -71,20 +71,19 @@ output:
 #NOTE: to update the CCSXML (i.e. the code to generate the 'CCS Concepts') directly in sample-sigchi.tex - it's too messy to do from the YAML in here.
 ---
 
-\begin{sidebar}
-  \textbf{How to Make a Side Bar}
+```{block type='sidebar'}
+**How to Make a Side Bar**
 
-  \textbf{Use \LaTeX\ Syntax:} Sidebars need to be placed in the \texttt{sidebar} \LaTeX\ environment. To achieve that, you can either: 1) write the text for the sidebar with markdown syntax, compile to PDF (if you are using RStudio, then just click the 'Knit' button), then open the generated \textbf{.tex} file for your manuscript wrap the desired parts inside \texttt{{\textbackslash}begin\{sidebar\}} and \texttt{{\textbackslash}end\{sidebar\}}, 2) simply all of the content for your sidebar using \LaTeX\ syntax in your R Markdown manuscript.
+  **Use a [custom block](https://bookdown.org/yihui/bookdown/custom-blocks.html) of type 'sidebar'**. Sidebars need to be placed in the `sidebar` \LaTeX\ environment. To achieve that, use the syntax ```` ```{block, type='sidebar'} ```` to begin such a block, ending the block with another three backticks.
   
-  The first option is better if you want to be able to compile your content to other formats than PDF, for example HTML or Microsoft Word.
+  Use this approach for arbitrary text you want to put over her - for dynamically created tables and figures, there is a separate syntax, as will be explained later.
   
-  In the source file for this example document, the sidebar is written in \LaTeX\ syntax inside the R Markdown document.
+  - If you want to add a caption for this kind of sidebar, you have to create this with \LaTeX\ syntax directly, e.g.  `\caption{my caption}`.
+  - Similarly, if you want a label for this kind of sidebar so you can refer to it, you must add with \LaTeX\ syntax within the sidebar, e.g. `\label{bar:arbitrary-sidebar}`.
   
-  \textbf{Margin figures and tables:} For these, however, there is R Markdown syntax you can use to automatically put dynamically generated tables or figures, as well as static figures, in the right \LaTeX\ environment. This is explained later.
-
-  \caption{This is the optional caption}
-  \label{bar:sidebar}
-\end{sidebar}
+\caption{This is the optional caption}
+\label{bar:arbitrary-sidebar}
+```
 
 # Introduction{-}
 Using a tool like [R Markdown](https://rmarkdown.rstudio.com) to write scientific papers makes your work more transparent and reproducible. It also reduces the risk of errors, because you can dynamically insert tables, figures, and summary statistics directly from the data they are generated from insted of transferring results manually from statistical software to manuscript.
