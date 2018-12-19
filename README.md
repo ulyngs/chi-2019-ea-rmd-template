@@ -18,7 +18,7 @@ devtools::install_github("ulyngs/chi-ea-rmd-template")
 ## Usage
 The easiest way to use the template is with RStudio, via File -> New File -> R Markdown...
 In the dialog box, click 'From Template', then find the new 'ACM CHI Extended Abstracts {CHIExtendedAbstracts}' option, give your manuscript a name (e.g. 'Test'), then click OK:
-![R Markdown template dialog](man/1_template.png "R Markdown template dialog")
+![R Markdown template dialog](man/1_template_dialog.png "R Markdown template dialog")
 
 A new folder named *Test* is created, and you see an open **Test.Rmd** file:
 ![Test.Rmd with illustration content](man/2_rmd.png "Test.Rmd with illustration content")
@@ -30,3 +30,5 @@ It also keeps the intermediary generated **Test.tex** file from which the PDF ou
 ![Intermediary Test.tex from which the PDF output was created](man/4_tex.png "Intermediary Test.tex from which the PDF output was created")
 
 Now go ahead and replace the content of **Test.Rmd** with your own fantastic work!
+
+**NOTE: include the initial *setup_output* at the top of your file, which creates custom chunk options that allow you to e.g. add image descriptions for visually impaired readers.**
