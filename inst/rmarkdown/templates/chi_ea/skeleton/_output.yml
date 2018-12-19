@@ -1,0 +1,6 @@
+bookdown::pdf_book:
+  template: chi_ea_template_v1.56_Rmd.tex
+  citation_package: natbib
+  keep_tex: true
+  includes:
+    in_header: ccsxml.tex

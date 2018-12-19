@@ -1,2 +1,2 @@
-name: "ACM CHI Extended Abstracts 2018"
-description: "This is a template for creating ACM CHI Extended Abstract papers in R Markdown, using the ACM's 2018 LaTeX template"
+name: "ACM CHI Extended Abstracts"
+description: "This is a template for creating ACM CHI Extended Abstract papers in R Markdown, using the ACM Master LaTeX template (v1.56)"

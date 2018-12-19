@@ -1,0 +1,80 @@
+\documentclass[sigchi-a, authorversion]{acmart}
+\usepackage{booktabs} % For formal tables
+\usepackage{ccicons}  % For Creative Commons citation icons
+
+\def\tightlist{} % UL 16 Dec 2018 stop pandoc from messing things up by putting lists in 'tightlist' command when no space between bullet points in Rmd file
+
+% UL 19 Dec 2018, enable code inclusion in shaded environments
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+
+% Copyright
+\setcopyright{$copyright$}
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+\acmDOI{$DOI$}
+
+% ISBN
+\acmISBN{$ISBN$}
+
+%Conference
+\acmConference[$conference-short$]{$conference$}{$conference-date$}{$conference-location$}
+\acmYear{$acm-year$}
+\copyrightyear{$copyright-year$}
+
+\acmPrice{$acm-price$}
+
+%\acmBadgeL[http://ctuning.org/ae/ppopp2016.html]{ae-logo}
+%\acmBadgeR[http://ctuning.org/ae/ppopp2016.html]{ae-logo}
+
+\begin{document}
+
+\title[$short-title$]{$title$}
+
+$for(author)$
+  \author{$author.name$}
+  \affiliation{
+    \position{$author.affiliation.position$}
+    \institution{$author.affiliation.institution$}
+    \city{$author.affiliation.city$}
+    \state{$author.affiliation.state$}
+    \country{$author.affiliation.country$}
+    \postcode{$author.affiliation.postcode$}
+  }
+  \email{$author.email$}
+$endfor$
+
+% The default list of authors is too long for headers.
+\renewcommand{\shortauthors}{$short-authors$}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\begin{abstract}
+  $abstract$
+\end{abstract}
+
+\keywords{$keywords$}
+
+
+
+\maketitle
+
+$body$
+
+\bibliography{$bibliography-path$}
+\bibliographystyle{ACM-Reference-Format}
+
+\end{document}
