@@ -4,11 +4,17 @@
 
 \def\tightlist{} % UL 16 Dec 2018 stop pandoc from messing things up by putting lists in 'tightlist' command when no space between bullet points in Rmd file
 
+% UL 25 Jan 2019: allow a watermark on the first page to be set from YAML - e.g. to make a version that says 'pre-print'
+$if(watermark)$
+\usepackage[$if(watermark-on-first-page-only)$firstpage$endif$]{draftwatermark}
+\SetWatermarkText{$watermark$}
+\SetWatermarkLightness{0.9}
+$endif$
+
 % UL 19 Dec 2018, enable code inclusion in shaded environments
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
-
 
 % Copyright
 \setcopyright{$copyright$}
