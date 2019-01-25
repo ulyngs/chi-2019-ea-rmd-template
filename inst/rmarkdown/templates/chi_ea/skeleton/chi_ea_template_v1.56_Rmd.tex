@@ -17,22 +17,13 @@ $highlighting-macros$
 $endif$
 
 % Copyright
-\setcopyright{$copyright$}
-%\setcopyright{none}
-%\setcopyright{acmcopyright}
-%\setcopyright{acmlicensed}
-%\setcopyright{rightsretained}
-%\setcopyright{usgov}
-%\setcopyright{usgovmixed}
-%\setcopyright{cagov}
-%\setcopyright{cagovmixed}
-
+\setcopyright{$setcopyright$}
 
 % DOI
-\acmDOI{$DOI$}
+\acmDOI{$acmDOI$}
 
 % ISBN
-\acmISBN{$ISBN$}
+\acmISBN{$acmISBN$}
 
 %Conference
 \acmConference[$conference-short$]{$conference$}{$conference-date$}{$conference-location$}
@@ -49,16 +40,32 @@ $endif$
 \title[$short-title$]{$title$}
 
 $for(author)$
-  \author{$author.name$}
-  \affiliation{
-    \position{$author.affiliation.position$}
-    \institution{$author.affiliation.institution$}
-    \city{$author.affiliation.city$}
-    \state{$author.affiliation.state$}
-    \country{$author.affiliation.country$}
-    \postcode{$author.affiliation.postcode$}
-  }
-  \email{$author.email$}
+\author{$author.name$}
+$if(authornote)$
+  \authornote{$authornote$}
+$endif$
+$if(orcid)$
+  \orcid{$orcid$}
+$endif$
+\email{$author.email$}
+$if(author.affiliation)$
+\affiliation{
+  \institution{$author.affiliation.institution$}
+  \city{$author.affiliation.city$}
+  \state{$author.affiliation.state$}
+  \country{$author.affiliation.country$}
+  \postcode{$author.affiliation.postcode$}
+}
+$endif$
+$if(author.additional-affiliation)$
+\additionalaffiliation{
+  \institution{$author.additional-affiliation.institution$}
+  \city{$author.additional-affiliation.city$}
+  \state{$author.additional-affiliation.state$}
+  \country{$author.additional-affiliation.country$}
+  \postcode{$author.additional-affiliation.postcode$}
+}
+$endif$
 $endfor$
 
 % The default list of authors is too long for headers.
