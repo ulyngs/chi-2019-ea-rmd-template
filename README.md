@@ -1,6 +1,21 @@
 # ACM CHI Extended Abstracts R Markdown Template
 This R package provides a template for writing ACM CHI Extended Abstract papers in R Markdown, and compiling to PDF via the LaTeX templates from the ACM Master Article Template (v. 1.56).
 
+## How to cite
+[![DOI](https://zenodo.org/badge/154396679.svg)](https://zenodo.org/badge/latestdoi/154396679)
+
+```
+@misc{lyngsChiEaRmdTemplate2018,
+  author = {Lyngs, Ulrik},
+  title = {chi-ea-rmd-template},
+  year = {2018},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/ulyngs/chi-ea-rmd-template}},
+  doi = {10.5281/zenodo.3524926},
+}
+```
+
 ## Overview
 Using a tool like [R Markdown](https://rmarkdown.rstudio.com) to write scientific papers makes your work more transparent and reproducible, and reduces the risk of introducing errors by manually transfering results from statistical software to manuscript.
 
