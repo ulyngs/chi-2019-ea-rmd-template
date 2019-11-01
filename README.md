@@ -4,7 +4,7 @@ This R package provides a template for writing ACM CHI Extended Abstract papers 
 ## How to cite
 [![DOI](https://zenodo.org/badge/154396679.svg)](https://zenodo.org/badge/latestdoi/154396679)
 
-```
+```bibtex
 @misc{lyngsChiEaRmdTemplate2018,
   author = {Lyngs, Ulrik},
   title = {chi-ea-rmd-template},
